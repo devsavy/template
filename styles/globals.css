@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Montserrat:wght@300;400;600;700&family=Roboto:wght@100;300;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* > * {
+  /* font-family: "Roboto", sans-serif; */
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Arimo", sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+/* SPLIT.JS STYLES */
+
+.gutter {
+  background-color: #e5e7eb;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+  background-image: url("/TsWeb/assets/images/h-gutter.png");
+  cursor: col-resize;
+}
+
+.gutter.gutter-vertical {
+  background-image: url("/TsWeb/assets/images/v-gutter.png");
+  cursor: row-resize;
+}
+
+/* Devextreme */
+.dx-treeview-search {
+  @apply !mr-4;
+}
+
+.dx-item {
+  @apply !mr-3;
+}
+
+.dx-scrollable-container {
+  /* @apply !pt-4; */
+}
+.bd {
+  @apply border-2 border-red-500;
+}
+
+.t-150 {
+  @apply transition duration-150 ease-out;
+}
+.t-250 {
+  @apply transition duration-200 ease-out;
+}
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #cbd5e0;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0);
+  /* border-radius: 100vh; */
+  border: 3px solid #fdfeff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+  height: 10px;
+  width: 10px;
+}
+
+.dx-header-filter {
+  font-size: 7px !important;
+  margin-top: 5px !important;
+}
+
+.dx-sort.dx-sort-up::before {
+  font-size: 11.5px;
+}
+
+.dx-sort.dx-sort-down::before {
+  font-size: 11.5px;
+}
+
+.dx-treeview-toggle-item-visibility.dx-treeview-toggle-item-visibility-opened::before {
+  color: white;
+}
+
+.dx-treeview-toggle-item-visibility::before {
+  color: white;
+}
+
+.dx-icon-search::before {
+  color: #00aee2 !important;
+}
+
+/* treeview styles - START=== */
+
+/* .dx-treeview-item-without-checkbox.dx-state-focused > .dx-treeview-item span {
+  color: #fca61d !important;
+} */
+
+/* .dx-treeview-item-without-checkbox.dx-state-focused > .dx-treeview-item svg {
+  fill: #fca61d !important;
+} */
+
+.dx-treeview-item-without-checkbox.dx-state-focused > .dx-treeview-item {
+  background-color: transparent !important;
+}
+
+/* .dx-treeview-item-without-checkbox.dx-state-focused > .dx-treeview-toggle-item-visibility::before {
+  color: #fca61d;
+} */
+
+.dx-treeview-item-without-checkbox.dx-state-selected > .dx-treeview-item span {
+  color: #fca61d !important;
+}
+
+.dx-treeview-item-without-checkbox.dx-state-selected > .dx-treeview-item svg {
+  fill: #fca61d !important;
+}
+
+.dx-treeview-item-without-checkbox.dx-state-selected > .dx-treeview-item {
+  background-color: transparent !important;
+}
+
+.dx-treeview-item-without-checkbox.dx-state-selected > .dx-treeview-toggle-item-visibility::before {
+  color: #fca61d;
+}
+
+/* treeview styles - ===END */
+
+.column-highlighted {
+  background-color: #fffec8;
+}
+.focus-row-highlighted {
+  background-color: red !important;
+}
+
+.dx-switch-container {
+  border-radius: 20px;
+  width: 65px;
+}
+.dx-switch-on,
+.dx-switch-off {
+  font-size: 12px;
+}
+
+.dx-switch-on {
+  margin-left: -2.5px;
+}
+.dx-switch-handle {
+  margin-left: 7px;
+  margin-top: 4px;
+  margin-right: -1.5px;
+  /* flex-basis: 1%; */
+}
+
+.dx-switch-on-value .dx-switch-handle {
+  transform: translateX(-180%) !important;
+}
+
+.dx-switch-handle::before {
+  border-radius: 50px;
+  height: 15px;
+  width: 15px;
+}
+
+tr.dx-header-row {
+  color: hsl(208, 56%, 40%);
+}
+#bookings tr.dx-data-row .disabled {
+  color: #c1c1c1;
+}
+
+#message:focus,
+input:focus {
+  outline: 1.5px solid #337ab7;
+}
+
+/* no data styling for context menu */
+#bookings .dx-datagrid-nodata {
+  height: 99.5%;
+  width: 99.7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#accountsBudgeting .dx-treelist-nodata {
+  height: 99.5%;
+  width: 99.7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-treeview .dx-empty-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  color: #d6d6d6;
+}
+
+.align-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center !important;
+}
+
+.align-buttons > div {
+  width: 1200px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0 !important;
+}
+
+.align-buttons > div .dx-button-content {
+  width: 90px;
+}
+
+.dx-command-select {
+  text-align: center !important;
+  width: 37px !important;
+  min-width: 37px !important;
+  max-width: 37px !important;
+}
